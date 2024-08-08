@@ -58,35 +58,40 @@ ScrollReveal().reveal(".home-content h1, .about-img", {origin: "left"});
 ScrollReveal().reveal(".home-content p, .about-content", {origin: "right"});
 
 // EmailJS (Contact Form Email)
-let form = document.getElementById("contact-form");
-let formBtn = document.getElementById("btn");
+const form = document.getElementById("contact-form");
+const formBtn = document.getElementById("btn");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const numberInput = document.getElementById("number");
+const subjectInput = document.getElementById("subject");
+const messageInput = document.getElementById("message");
 
-function sendMail() {
-    let params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        number: document.getElementById("number").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value
+const publicKey = "I89Qo2el_H01M216N";
+const serviceID = "service_tj5m947";
+const templateID = "template_r14x9xb";
+
+emailjs.init(publicKey);
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    formBtn.innerText = "Just A Moment...";
+    const inputFields = {
+        name: nameInput.value,
+        email: emailInput.value,
+        number: numberInput.value,
+        subject: subjectInput.value,
+        message: messageInput.value
     };
-
-    emailjs.send("service_tj5m947", "template_r14x9xb", params).then((res) => {
-        console.log(res);
-        alert("Your message was sent successfully!");
-        form.reset();
-    })
-    .catch(err => console.log(err));
-};
-
-function enableSubmit () {
-    let inputs = document.getElementsByClassName("required");
-    let isValid = true;
-    for (let i = 0; i < inputs.length; i++) {
-        let changedInput = inputs[i];
-        if (changedInput.value.trim() === "" || changedInput.value === null) {
-            isValid = false;
-            break;
-        }
-    }
-    formBtn.disabled = !isValid;
-}
+    emailjs.send(serviceID, templateID, inputFields)
+        .then(() => {
+            formBtn.innerText = "Message Send Successfully";
+            nameInput.value = "";
+            emailInput.value = "";
+            numberInput.value = "";
+            subjectInput.value = "";
+            messageInput.value = "";
+    }, (error) => {
+        console.log(error);
+        formBtn.innerText = "Something went wrong";
+    });
+});
