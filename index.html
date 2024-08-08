@@ -159,30 +159,39 @@
     <!-- Contact Section Layout -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
+        <form id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input id="name" type="text" placeholder="Full Name*" class="required" onkeyup="enableSubmit()">
+                <input id="email" type="email" placeholder="Email Address*" class="required" onkeyup="enableSubmit()">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Email Subject">
+                <input id="number" type="number" placeholder="Phone Number">
+                <input id="subject" type="text" placeholder="Email Subject*" class="required" onkeyup="enableSubmit()">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message*" class="required" onkeyup="enableSubmit()"></textarea>
+            <p>Please fill out all * fields to submit form</p><br>
+            <input type="submit" value="Send Message" id="btn" class="btn" onclick="sendMail()" disabled>
         </form>
     </section>
 
     <!-- Footer Layout -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2024 by Syniah Peterson | All Rights Reserved.</p>
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class="fas fa-arrow-up"></i></a>
         </div>
-     </footer>
-
+    </footer>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "I89Qo2el_H01M216N",
+           });
+        })();
+     </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="script.js"></script>
