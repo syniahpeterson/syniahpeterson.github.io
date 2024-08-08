@@ -56,3 +56,37 @@ ScrollReveal().reveal(".home-content, .heading", {origin: "top"});
 ScrollReveal().reveal(".home-img, .skills-container, .projects-box, .contact-form", {origin: "bottom"});
 ScrollReveal().reveal(".home-content h1, .about-img", {origin: "left"});
 ScrollReveal().reveal(".home-content p, .about-content", {origin: "right"});
+
+// EmailJS (Contact Form Email)
+let form = document.getElementById("contact-form");
+let formBtn = document.getElementById("btn");
+
+function sendMail() {
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        number: document.getElementById("number").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_tj5m947", "template_r14x9xb", params).then((res) => {
+        console.log(res);
+        alert("Your message was sent successfully!");
+        form.reset();
+    })
+    .catch(err => console.log(err));
+};
+
+function enableSubmit () {
+    let inputs = document.getElementsByClassName("required");
+    let isValid = true;
+    for (let i = 0; i < inputs.length; i++) {
+        let changedInput = inputs[i];
+        if (changedInput.value.trim() === "" || changedInput.value === null) {
+            isValid = false;
+            break;
+        }
+    }
+    formBtn.disabled = !isValid;
+}
