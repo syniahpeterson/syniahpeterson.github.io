@@ -14,7 +14,7 @@
 <body>
     <!-- Nav Bar Layout -->
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
+        <a href="#home" class="logo">Portfolio.</a>
         <i class="fas fa-bars" id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" style="--i:1;" class="active">Home</a>
@@ -161,16 +161,15 @@
         <h2 class="heading">Contact <span>Me!</span></h2>
         <form id="contact-form">
             <div class="input-box">
-                <input id="name" type="text" placeholder="Full Name*" class="required" onkeyup="enableSubmit()">
-                <input id="email" type="email" placeholder="Email Address*" class="required" onkeyup="enableSubmit()">
+                <input id="name" type="text" placeholder="Full Name" autocomplete="given-name family-name" required>
+                <input id="email" type="email" placeholder="Email Address" autocomplete="email" required>
             </div>
             <div class="input-box">
-                <input id="number" type="number" placeholder="Phone Number">
-                <input id="subject" type="text" placeholder="Email Subject*" class="required" onkeyup="enableSubmit()">
+                <input id="number" type="number" placeholder="Phone Number" autocomplete="tel">
+                <input id="subject" type="text" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message*" class="required" onkeyup="enableSubmit()"></textarea>
-            <p>Please fill out all * fields to submit form</p><br>
-            <input type="submit" value="Send Message" id="btn" class="btn" onclick="sendMail()" disabled>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" id="btn" class="btn">Send Message</button>
         </form>
     </section>
 
@@ -185,13 +184,6 @@
     </footer>
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-           emailjs.init({
-             publicKey: "I89Qo2el_H01M216N",
-           });
-        })();
-     </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="script.js"></script>
