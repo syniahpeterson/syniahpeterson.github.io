@@ -239,6 +239,47 @@ span {
     margin: 1rem 0 3rem;
 }
 
+.hidden1, .hidden2, .hidden3 {
+    text-align: center;
+    display: none;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+.hidden ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.hidden h3 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hidden li {
+    font-size: 2.5rem;
+}
+
+li::marker {
+    color: var(--main-color);
+}
+
+.hidden li a.links {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.hidden li.btn {
+    margin-top: 3rem;
+    list-style-type: none;
+}
+
+.hidden p {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+}
+
 /* Project Section Design */
 .projects {
     background: var(--second-bg-color);
@@ -329,13 +370,13 @@ span {
     margin-bottom: 3rem;
 }
 
-.contact form .input-box {
+.contact form .input-box{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.contact form .input-box input, 
+.contact form .input-box input,
 .contact form textarea {
     width: 100%;
     padding: 1.5rem;
