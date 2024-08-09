@@ -96,52 +96,44 @@ form.addEventListener("submit", e => {
     });
 });
 
-// Hidden Skill Sections
-function showHideSection1 () {
-    const sect1 = document.getElementById("web-dev");
-    if (sect1.classList.contains("hidden1")) {
-        sect1.classList.remove("hidden1");
-        return;
+function readMoreLess1 () {
+    const webDevMore = document.getElementById("web-dev-more");
+    const webDevBtn = document.getElementById("web-dev-btn");
+
+    if (webDevMore.classList.contains("hide")) {
+        webDevMore.classList.remove("hide");
+        webDevBtn.textContent = "Read Less";
     }
     else {
-        sect1.classList.add("hidden1");
+        webDevMore.classList.add("hide");
+        webDevBtn.textContent = "Read More";
     }
 }
 
-function showHideSection2 () {
-    const sect2 = document.getElementById("web-design");
-    if (sect2.classList.contains("hidden2")) {
-        sect2.classList.remove("hidden2");
-    }
-    else {
-        sect2.classList.add("hidden2");
-    } 
-}
+function readMoreLess2 () {
+    const webDesignMore = document.getElementById("web-design-more");
+    const webDesignBtn = document.getElementById("web-design-btn");
 
-function showHideSection3 () {
-    const sect3 = document.getElementById("microsoft");
-    if (sect3.classList.contains("hidden3")) {
-        sect3.classList.remove("hidden3");
+    if (webDesignMore.classList.contains("hide")) {
+        webDesignMore.classList.remove("hide");
+        webDesignBtn.textContent = "Read Less";
     }
     else {
-        sect3.classList.add("hidden3");
+        webDesignMore.classList.add("hide");
+        webDesignBtn.textContent = "Read More";
     }
 }
 
-function disableScroll () {
-    function disableScroll() {
-        scrollTop =
-            window.scrollY ||
-            document.documentElement.scrollTop;
-        scrollLeft =
-            window.scrollY ||
-            document.documentElement.scrollLeft,
-            window.onscroll = function () {
-                window.scrollTo(scrollLeft, scrollTop);
-            };
-    }
+function readMoreLess3 () {
+    const microsoftMore = document.getElementById("microsoft-more");
+    const microsoftBtn = document.getElementById("microsoft-btn");
 
-    function enableScroll() {
-        window.onscroll = function () { };
+    if (microsoftMore.classList.contains("hide")) {
+        microsoftMore.classList.remove("hide");
+        microsoftBtn.textContent = "Read Less";
+    }
+    else {
+        microsoftMore.classList.add("hide");
+        microsoftBtn.textContent = "Read More";
     }
 }
