@@ -96,10 +96,10 @@ form.addEventListener("submit", e => {
     });
 });
 
-function readMoreLess1 () {
-    const webDevMore = document.getElementById("web-dev-more");
-    const webDevBtn = document.getElementById("web-dev-btn");
+const webDevMore = document.getElementById("web-dev-more");
+const webDevBtn = document.getElementById("web-dev-btn");
 
+webDevBtn.addEventListener("click", () => {
     if (webDevMore.classList.contains("hide")) {
         webDevMore.classList.remove("hide");
         webDevBtn.textContent = "Read Less";
@@ -108,12 +108,12 @@ function readMoreLess1 () {
         webDevMore.classList.add("hide");
         webDevBtn.textContent = "Read More";
     }
-}
+});
 
-function readMoreLess2 () {
-    const webDesignMore = document.getElementById("web-design-more");
-    const webDesignBtn = document.getElementById("web-design-btn");
+const webDesignMore = document.getElementById("web-design-more");
+const webDesignBtn = document.getElementById("web-design-btn");
 
+webDesignBtn.addEventListener("click", ()=>{
     if (webDesignMore.classList.contains("hide")) {
         webDesignMore.classList.remove("hide");
         webDesignBtn.textContent = "Read Less";
@@ -122,12 +122,12 @@ function readMoreLess2 () {
         webDesignMore.classList.add("hide");
         webDesignBtn.textContent = "Read More";
     }
-}
+});
 
-function readMoreLess3 () {
-    const microsoftMore = document.getElementById("microsoft-more");
-    const microsoftBtn = document.getElementById("microsoft-btn");
+const microsoftMore = document.getElementById("microsoft-more");
+const microsoftBtn = document.getElementById("microsoft-btn");
 
+microsoftBtn.addEventListener("click", () => {
     if (microsoftMore.classList.contains("hide")) {
         microsoftMore.classList.remove("hide");
         microsoftBtn.textContent = "Read Less";
@@ -136,4 +136,4 @@ function readMoreLess3 () {
         microsoftMore.classList.add("hide");
         microsoftBtn.textContent = "Read More";
     }
-}
+});
