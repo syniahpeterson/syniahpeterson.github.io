@@ -67,81 +67,60 @@
             <div class="skills-box">
                 <i class="fas fa-code"></i>
                 <h3>Web Development</h3>
-                <p>I code with languages like HTML, CSS, JavaScript, and others for front-end development.</p>
-                <a href="#web-dev" class="btn" onclick="showHideSection1(), disableScroll()">Read More</a>
+                <p>I code with languages like HTML, CSS, JavaScript for front-end development.</p>
+                <div id="web-dev-more" class="hide">
+                    <h3>Known <span>Languages</span></h3><br>
+                    <ul>
+                        <li>HyperText Markup Language (HTML)</li>
+                        <li>Cascading Style Sheets (CSS)</li>
+                        <li>JavaScript (JS)</li>
+                    </ul>
+                    <h3>Known <span>Libraries</span></h3>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>JQuery</li>
+                        <li>Syntactically Awesome Style Sheets (SASS)</li>
+                    </ul>
+                    <h3>My <span>Certifications</span></h3>
+                    <ul>
+                        <li><a class="links" href="https://www.freecodecamp.org/certification/SyniahPeterson/responsive-web-design" target="_blank">Responsive Web Design</a></li>
+                        <li><a class="links" href="https://www.freecodecamp.org/certification/SyniahPeterson/javascript-algorithms-and-data-structures-v8" target="_blank">JavaScript Algorithms and Data Structures</a></li>
+                    </ul>
+                </div>
+                <button id="web-dev-btn" class="btn" onclick="readMoreLess1()">Read More</button>
             </div>
             <div class="skills-box">
                 <i class="fab fa-figma"></i>
                 <h3>Web Design</h3>
                 <p>I design with apps like Figma to showcase frontend website development to clients.</p>
-                <a href="#web-design" class="btn" onclick="showHideSection2(), disableScroll()">Read More</a>
+                <div id="web-design-more" class="hide">
+                    <h3>Known Design Platforms</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Google Sites</li>
+                        <li>Wix</li>
+                        <li>Squarespace</li>
+                    </ul>
+                </div>
+                <button id="web-design-btn" class="btn" onclick="readMoreLess2()">Read More</button>
             </div>
             <div class="skills-box">
                 <i class="fab fa-microsoft"></i>
                 <h3>Microsoft Office</h3>
                 <p>I use microsoft office apps to communicate and document work plans for clients.</p>
-                <a href="#microsoft" class="btn" onclick="showHideSection3(), disableScroll()">Read More</a>
+                <div id="microsoft-more" class="hide">
+                    <h3>Known Microsoft Office Applications</h3>
+                    <ul>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft Outlook</li>
+                        <li>Microsoft PowerPoint</li>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft OneNote</li>
+                    </ul>
+                </div>
+                <button id="microsoft-btn" class="btn" onclick="readMoreLess3()">Read More</button>
             </div>
         </div>
-    </section>
-
-    <section class="hidden hidden1" id="web-dev">
-        <h2 class="heading">Web <span>Development</span></h2>
-        <h3>Known <span>Languages</span></h3><br>
-        <ul>
-            <li>HyperText Markup Language (HTML)</li>
-            <li>Cascading Style Sheets (CSS)</li>
-            <li>JavaScript (JS)</li>
-        </ul>
-        <h3>Known <span>Libraries</span></h3>
-        <ul>
-            <li>Bootstrap</li>
-            <li>JQuery</li>
-            <li>Syntactically Awesome Style Sheets (SASS)</li>
-        </ul>
-        <h3>My <span>Certifications</span></h3>
-        <ul>
-            <li><a class="links" href="https://www.freecodecamp.org/certification/SyniahPeterson/responsive-web-design" target="_blank">Responsive Web Design</a></li>
-            <li><a class="links" href="https://www.freecodecamp.org/certification/SyniahPeterson/javascript-algorithms-and-data-structures-v8" target="_blank">JavaScript Algorithms and Data Structures</a></li>
-        </ul>
-        <br>
-        <ul>
-            <li class="btn"><a href="#skills" class="btn btn-content" onclick="showHideSection1(), enableScroll()">Go Back</a></li>
-            <p>Click the go back button to see the rest of the site</p>
-        </ul>
-    </section>
-
-    <section class="hidden hidden2" id="web-design">
-        <h2 class="heading">Web <span>Design</span></h2>
-            <h3>Known Design Platforms</h3>
-        <ul>
-            <li>Figma</li>
-            <li>Google Sites</li>
-            <li>Wix</li>
-            <li>Squarespace</li>
-        </ul>
-        <br>
-        <ul>
-            <li class="btn"><a href="#skills" class="btn btn-content" onclick="showHideSection2(), enableScroll()">Go Back</a></li>
-            <p>Click the go back button to see the rest of the site</p>
-        </ul>
-    </section>
-
-    <section class="hidden hidden3" id="microsoft">
-        <h2 class="heading">Microsoft <span>Office</span></h2>
-        <h3>Known Microsoft Office Applications</h3>
-        <ul>
-            <li>Microsoft Word</li>
-            <li>Microsoft Outlook</li>
-            <li>Microsoft PowerPoint</li>
-            <li>Microsoft Excel</li>
-            <li>Microsoft OneNote</li>
-        </ul>
-        <br>
-        <ul>
-            <li class="btn"><a href="#skills" class="btn btn-content" onclick="showHideSection3(), enableScroll()">Go Back</a></li>
-            <p>Click the go back button to see the rest of the site</p>
-        </ul>
     </section>
 
     <!-- Project Section Layout -->
