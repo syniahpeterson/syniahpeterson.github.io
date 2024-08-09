@@ -95,3 +95,53 @@ form.addEventListener("submit", e => {
         formBtn.innerText = "Something went wrong";
     });
 });
+
+// Hidden Skill Sections
+function showHideSection1 () {
+    const sect1 = document.getElementById("web-dev");
+    if (sect1.classList.contains("hidden1")) {
+        sect1.classList.remove("hidden1");
+        return;
+    }
+    else {
+        sect1.classList.add("hidden1");
+    }
+}
+
+function showHideSection2 () {
+    const sect2 = document.getElementById("web-design");
+    if (sect2.classList.contains("hidden2")) {
+        sect2.classList.remove("hidden2");
+    }
+    else {
+        sect2.classList.add("hidden2");
+    } 
+}
+
+function showHideSection3 () {
+    const sect3 = document.getElementById("microsoft");
+    if (sect3.classList.contains("hidden3")) {
+        sect3.classList.remove("hidden3");
+    }
+    else {
+        sect3.classList.add("hidden3");
+    }
+}
+
+function disableScroll () {
+    function disableScroll() {
+        scrollTop =
+            window.scrollY ||
+            document.documentElement.scrollTop;
+        scrollLeft =
+            window.scrollY ||
+            document.documentElement.scrollLeft,
+            window.onscroll = function () {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+    }
+
+    function enableScroll() {
+        window.onscroll = function () { };
+    }
+}
