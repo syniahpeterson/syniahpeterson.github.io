@@ -306,7 +306,7 @@ li::marker {
 
 .projects-box img {
     width: 100%;
-    object-fit: contain;
+    min-height: 100%;
     transition: 0.5s ease;
 }
 
