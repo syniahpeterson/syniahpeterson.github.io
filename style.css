@@ -234,50 +234,28 @@ span {
     font-size: 2.6rem;
 }
 
-.skills-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
-}
-
-.hidden1, .hidden2, .hidden3 {
-    text-align: center;
-    display: none;
-    max-height: 100%;
-    overflow-y: hidden;
-}
-
-.hidden ul {
-    display: inline-block;
+.skills-box li {
     text-align: left;
+    font-size: 1.6rem;
+    margin: 1rem 12.5rem 3rem;
 }
 
-.hidden h3 {
-    font-size: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.hidden li {
-    font-size: 2.5rem;
+.skills-box li a {
+    color: var(--text-color);
+    text-decoration: underline;
 }
 
 li::marker {
     color: var(--main-color);
 }
 
-.hidden li a.links {
-    color: var(--text-color);
-    text-decoration: underline;
+.skills-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
 }
 
-.hidden li.btn {
-    margin-top: 3rem;
-    list-style-type: none;
-}
-
-.hidden p {
-    font-size: 1rem;
-    margin-top: 0.6rem;
+.hide {
+    display: none;
 }
 
 /* Project Section Design */
