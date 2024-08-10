@@ -137,3 +137,17 @@ microsoftBtn.addEventListener("click", () => {
         microsoftBtn.textContent = "Read More";
     }
 });
+
+const aboutBtn = document.getElementById("about-btn");
+const aboutMore = document.getElementById("about-more");
+
+aboutBtn.addEventListener("click", () => {
+    if (aboutMore.classList.contains("hide")) {
+        aboutMore.classList.remove("hide");
+        aboutBtn.textContent = "Read Less";
+    }
+    else {
+        aboutMore.classList.add("hide");
+        aboutBtn.textContent = "Read More"
+    }
+})
