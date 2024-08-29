@@ -86,6 +86,8 @@ section {
 .home-img img {
     width: 35vw;
     animation: floatImage 4s ease-in-out infinite;
+    clip-path: circle();
+    margin-left: 2em;
 }
 
 @keyframes floatImage {
@@ -176,6 +178,7 @@ span {
 .about-img img {
     width: 35vw;
     animation: floatImage 4s ease-in-out infinite;
+    clip-path: circle();
 }
 
 .heading {
