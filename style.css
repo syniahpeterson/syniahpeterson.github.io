@@ -253,7 +253,7 @@ li::marker {
 }
 
 .viewing {
-    height: 100vh;
+    height: 80vh;
 }
 
 #small-message1, #small-message2, #small-message3 {
