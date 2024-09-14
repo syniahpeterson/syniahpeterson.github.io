@@ -252,6 +252,10 @@ li::marker {
     display: none;
 }
 
+.viewing {
+    height: 50vh;
+}
+
 #small-message1, #small-message2, #small-message3 {
     font-size: 1.5em;
 }
