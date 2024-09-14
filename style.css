@@ -252,7 +252,7 @@ li::marker {
 }
 
 .viewing {
-    height: 75vh;
+    height: 100vh;
 }
 
 #small-message1, #small-message2, #small-message3 {
@@ -535,6 +535,7 @@ li::marker {
 @media (max-width: 617px) {
     .projects-container {
         grid-template-columns: 1fr;
+        width: 100%;
     }
 }
 
