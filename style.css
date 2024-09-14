@@ -281,8 +281,6 @@ li::marker {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-    height: 15vh;
-    width: 30vw;
 }
 
 .projects-box img {
