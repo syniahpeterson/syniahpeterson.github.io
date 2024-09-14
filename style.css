@@ -90,20 +90,6 @@ section {
     margin-left: 2em;
 }
 
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    
-    50% {
-        transform: translateY(-2.4rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
@@ -223,6 +209,10 @@ span {
     transition: 0.5s ease;
 }
 
+.skills-box {
+    width: 100vw;
+}
+
 .skills-container .skills-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
@@ -261,6 +251,14 @@ li::marker {
     display: none;
 }
 
+.viewing {
+    height: 50vh;
+}
+
+#small-message1, #small-message2, #small-message3 {
+    font-size: 1.5em;
+}
+
 /* Project Section Design */
 .projects {
     background: var(--second-bg-color);
@@ -283,6 +281,8 @@ li::marker {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    height: 15vh;
+    width: 30vw;
 }
 
 .projects-box img {
@@ -414,6 +414,21 @@ li::marker {
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--second-bg-color);
+}
+
+/* Key Frames For Animations */
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Media Queries For Web Responsiveness */
