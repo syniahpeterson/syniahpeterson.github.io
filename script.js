@@ -96,12 +96,14 @@ form.addEventListener("submit", e => {
     });
 });
 
+// Skills Page Button Functions
 const webDevMore = document.getElementById("web-dev-more");
 const webDevBtn = document.getElementById("web-dev-btn");
 
 webDevBtn.addEventListener("click", () => {
     if (webDevMore.classList.contains("hide")) {
         webDevMore.classList.remove("hide");
+        webDevMore.classList.add("viewing");
         webDevBtn.textContent = "Read Less";
     }
     else {
@@ -116,6 +118,7 @@ const webDesignBtn = document.getElementById("web-design-btn");
 webDesignBtn.addEventListener("click", ()=>{
     if (webDesignMore.classList.contains("hide")) {
         webDesignMore.classList.remove("hide");
+        webDesignMore.classList.add("viewing");
         webDesignBtn.textContent = "Read Less";
     }
     else {
@@ -130,6 +133,7 @@ const microsoftBtn = document.getElementById("microsoft-btn");
 microsoftBtn.addEventListener("click", () => {
     if (microsoftMore.classList.contains("hide")) {
         microsoftMore.classList.remove("hide");
+        microsoftMore.classList.add("viewing");
         microsoftBtn.textContent = "Read Less";
     }
     else {
@@ -150,4 +154,4 @@ aboutBtn.addEventListener("click", () => {
         aboutMore.classList.add("hide");
         aboutBtn.textContent = "Read More"
     }
-})
+});
