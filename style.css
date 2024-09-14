@@ -340,6 +340,11 @@ li::marker {
     color: var(--second-bg-color);
 }
 
+.more {
+    margin: 0 auto;
+    text-wrap: nowrap;
+}
+
 /* Contact Section Design */
 .contact h2 {
     margin-bottom: 3rem;
